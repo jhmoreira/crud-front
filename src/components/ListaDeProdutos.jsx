@@ -10,6 +10,7 @@ class ListaDeProdutos extends Component{
         this.state={
             produtos:[]
         }
+        this.adicionaProduto = this.adicionaProduto.bind(this);
     }
     componentDidMount(){
             Servidor.recuperarProdutos().then((response)=>{
@@ -17,11 +18,18 @@ class ListaDeProdutos extends Component{
                     this.setState({produtos: response.data});
             });
     }
+
+    adicionaProduto(){
+
+        this.props.history.push('adiciona-produto');
+    }
     render(){
         return(
         <>
             <h2 className="text-center"> Lista de Produtos</h2>
-
+            <div className="row">
+                <button className="btn btn-primary" onClick={this.adicionaProduto}>Adiciona Produto</button>
+            </div>
             <div className="row">
                 <table className="table table-striped table-bordered">
                     <thead>
