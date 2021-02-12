@@ -27,11 +27,11 @@ class VisualizarProduto extends Component{
                     <h3 className="text-center">Visualiza Produto</h3>
                     <div className="card-body">
                         <div className="row">
-                            <label >Nome do Produto</label>
+                            <label >Nome do Produto: </label>
                             <div>{this.state.produto.nomeProduto}</div>
                         </div>
                         <div className="row">
-                            <label >Descrição do Produto</label>
+                            <label >Descrição do Produto: </label>
                             <div>{this.state.produto.descricaoProduto}</div>
                         </div>
                     </div>
