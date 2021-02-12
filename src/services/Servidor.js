@@ -14,6 +14,9 @@ criaProduto(produto){
 recuperaProdutoPorId(idProduto){
     return axios.get(URL_BASE + '/' + idProduto);
 }
+atualizaProduto(produto, idProduto){
+    return axios.put(URL_BASE + '/' + idProduto,produto)
+}
 }
 
 export default new Servidor()

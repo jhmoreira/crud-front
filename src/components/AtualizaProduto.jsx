@@ -27,7 +27,10 @@ class AtualizaProduto extends Component{
       
          let produto={nomeProduto: this.state.nomeProduto, descricaoProduto: this.state.descricaoProduto};
          console.log('produto =>'+ JSON.stringify(produto));
+    Servidor.atualizaProduto(produto,this.state.id).then(res =>{
 
+        this.props.history.push('/produtos');
+    })
         
       
     }
