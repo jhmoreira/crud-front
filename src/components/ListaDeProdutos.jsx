@@ -21,7 +21,7 @@ class ListaDeProdutos extends Component{
 
     adicionaProduto(){
 
-        this.props.history.push('adiciona-produto');
+        this.props.history.push('/adiciona-produto');
     }
     render(){
         return(

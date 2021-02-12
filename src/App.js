@@ -14,10 +14,9 @@ function App() {
           <Header />
           <div className="container">
             <Switch>
-              <Route path="/" exact component={ListaDeProdutos}>  </Route>
-              <Route path="/produtos" component={ListaDeProdutos}>  </Route>
-              <Route path="/adiciona-produto" component={CriarProduto}>  </Route>
-              
+              <Route path="/" exact component={ListaDeProdutos}></Route>
+              <Route path="/produtos" component={ListaDeProdutos}></Route>
+              <Route path="/adiciona-produto" component={CriarProduto}></Route>
             </Switch>
           </div>
           <Footer />
