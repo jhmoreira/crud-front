@@ -17,6 +17,10 @@ recuperaProdutoPorId(idProduto){
 atualizaProduto(produto, idProduto){
     return axios.put(URL_BASE + '/' + idProduto,produto)
 }
+deletaProduto(idProduto){
+    return axios.delete(URL_BASE +'/'+ idProduto);
+
+}
 }
 
 export default new Servidor()

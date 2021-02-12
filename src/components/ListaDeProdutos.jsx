@@ -12,6 +12,14 @@ class ListaDeProdutos extends Component{
         }
         this.adicionaProduto = this.adicionaProduto.bind(this);
         this.editaProduto=this.editaProduto.bind(this);
+        this.deletaProduto=this.deletaProduto.bind(this);
+
+
+    }
+    deletaProduto(id){
+Servidor.deletaProduto(id).then(res=>{
+    this.setState({produtos:this.state.produtos.filter(produto=>produto.id!==id)})
+})
     }
     editaProduto(id){
         this.props.history.push(`/atualiza-produto/${id}`)
@@ -54,6 +62,7 @@ class ListaDeProdutos extends Component{
                                     <td >{produtos.descricaoProduto}</td>
                                     <td>
                                         <button onClick={()=> this.editaProduto(produtos.id)} className="btn btn-info">Atualiza Produto</button>
+                                        <button onClick={()=> this.deletaProduto(produtos.id)} className="btn btn-danger" style={{marginLeft:"10px "}}>Deleta Produto</button>
                                     </td>
                                 </tr>
                             )
