@@ -66,7 +66,7 @@ Servidor.deletaProduto(id).then(res=>{
                                     <td>
                                         <button onClick={()=> this.editaProduto(produtos.id)} className="btn btn-success">Atualiza Produto</button>
                                         <button onClick={()=> this.deletaProduto(produtos.id)} className="btn btn-danger" style={{marginLeft:"10px "}}>Deleta Produto</button>
-                                        <button onClick={()=> this.visualizaProduto(produtos.id)} className="btn btn-info" style={{marginLeft:"10px "}}>Visualizar Produto</button>
+                                        <button onClick={()=> this.visualizaProduto(produtos.id)} className="btn btn-info" style={{marginLeft:"10px "}}>Visualiza Produto</button>
                                     </td>
                                 </tr>
                             )
