@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Servidor from '../services/Servidor';
 
 class CriarProduto extends Component{
     constructor(props){
@@ -16,6 +17,10 @@ class CriarProduto extends Component{
       
          let produto={nomeProduto: this.state.nomeProduto, descricaoProduto: this.state.descricaoProduto};
          console.log('produto =>'+ JSON.stringify(produto));
+
+         Servidor.criaProduto(produto).then(res=>{
+         this.props.history.push('/produtos');
+         })
       
     }
     adicionaNome = (event)=>{

@@ -6,6 +6,11 @@ class Servidor{
 recuperarProdutos(){
     return axios.get(URL_BASE)
 }
+
+criaProduto(produto){
+    return axios.post(URL_BASE,produto);
+
+}
 }
 
 export default new Servidor()
