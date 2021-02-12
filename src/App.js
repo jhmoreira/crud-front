@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import CriarProduto from './components/CriarProduto';
 import AtualizaProduto from './components/AtualizaProduto';
+import VisualizarProduto from './components/VisualizarProduto';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Route path="/produtos" component={ListaDeProdutos}></Route>
               <Route path="/adiciona-produto" component={CriarProduto}></Route>
               <Route path="/atualiza-produto/:id" component={AtualizaProduto}></Route>
+              <Route path="/visualiza-produto/:id" component={VisualizarProduto}></Route>
             </Switch>
           </div>
           <Footer />
