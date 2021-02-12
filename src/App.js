@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import CriarProduto from './components/CriarProduto';
+import AtualizaProduto from './components/AtualizaProduto';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route path="/" exact component={ListaDeProdutos}></Route>
               <Route path="/produtos" component={ListaDeProdutos}></Route>
               <Route path="/adiciona-produto" component={CriarProduto}></Route>
+              <Route path="/atualiza-produto/:id" component={AtualizaProduto}></Route>
             </Switch>
           </div>
           <Footer />

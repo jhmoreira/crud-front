@@ -11,6 +11,10 @@ class ListaDeProdutos extends Component{
             produtos:[]
         }
         this.adicionaProduto = this.adicionaProduto.bind(this);
+        this.editaProduto=this.editaProduto.bind(this);
+    }
+    editaProduto(id){
+        this.props.history.push(`/atualiza-produto/${id}`)
     }
     componentDidMount(){
             Servidor.recuperarProdutos().then((response)=>{
@@ -48,6 +52,9 @@ class ListaDeProdutos extends Component{
                                     <td>{produtos.id}</td>
                                     <td >{produtos.nomeProduto}</td>
                                     <td >{produtos.descricaoProduto}</td>
+                                    <td>
+                                        <button onClick={()=> this.editaProduto(produtos.id)} className="btn btn-info">Atualiza Produto</button>
+                                    </td>
                                 </tr>
                             )
                         }
